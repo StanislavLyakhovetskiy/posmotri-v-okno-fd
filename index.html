@@ -23,7 +23,7 @@
               <span class="search-form__label-text visually-hidden">Город</span>
               <input
                 type="text"
-                placeholder="Санкт Петербург, например"
+                placeholder="Санкт-Петербург, например"
                 name="city"
                 class="search-form__textfield"
               />
@@ -64,20 +64,23 @@
               </label>
             </div>
           </fieldset>
-          <button type="submit" class="button search-form__submit-button">
-            Найти
-          </button>
+          <div class="submit_button-border">
+            <button type="submit" class="button search-form__submit-button">
+              Найти
+            </button>
+          </div>
+          <!-- <button type="submit" class="button search-form__submit-button">
+            Найти 
+          </button> -->
         </form>
       </section>
       <section class="content__details">
         <h1 class="title">
           <span class="content__accent">По-</span><br />смотри<br />в окно
         </h1>
-        <div class="content__list-container">
-          <ul class="content__list">
-            <!-- ЗДЕСЬ ОКАЖУТСЯ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
-          </ul>
-        </div>
+        <ul class="content__list">
+          <!-- ЗДЕСЬ ОКАЖУТСЯ ТЕМПЛЕЙТЫ КАРТОЧЕК -->
+        </ul>
       </section>
     </main>
 
@@ -108,12 +111,16 @@
       </li>
     </template>
     <template class="more-button-template">
-      <button class="button more-button">Показать еще</button>
+      <div class="more_button-border">
+        <!-- пришлось обернуть так как сделать обводку при focus по другому никак -->
+        <li><button class="button more-button">Показать еще</button></li>
+      </div>
+      <!-- <li><button class="button more-button">Показать еще</button></li> -->
     </template>
 
     <template class="error-template">
       <div class="error">
-        <h2 class="error__title">Из этого города нет видео :(</h2>
+        <h2 class="error__title"></h2>
       </div>
     </template>
     <script src="./scripts/script.js"></script>
